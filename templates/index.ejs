@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bucket Travel</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        .text {
+            color:blueviolet;
+            font-weight: bold;
+        }
+
+        html {
+            border-style: ridge;
+            border-color: black;
+            border-width: .5rem;
+            padding-left: 3rem;
+            padding-right: 20rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            margin-left: 20rem;
+            margin-right: 20rem;
+        }
+
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dream Travel Bucket List</h1>
+    A simple app to organize your dreams! Add countries to your bucket list and learn a little more about the place!
+    <br><br>
+    
+    <div class="border1">
+        <form action="http://localhost:5000/confirmation" method="post">
+            <fieldset name="Personal Info" class="text">
+                <legend>Personal Info</legend> 
+                <strong>First Name: </strong><input type="text" name="firstname"><br><br>
+                <strong>Last Name: </strong><input type="text" name="lastname">
+            </fieldset>
+    
+            <fieldset class="text">
+                <legend>Add to your list!</legend>
+                <strong>Desired Country: </strong><input type="text" name="destination">
+                
+            </fieldset>
+            <br><br>
+            <input type="submit" value="Add to list!"><input type="reset" value="Clear">
+        </form>
+
+    </div>    
+
+</body>
+</html>

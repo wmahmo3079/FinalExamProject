@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+</head>
+
+<body>
+    <h1>The destination has been added to your list!</h1>
+    
+    <div>
+        <strong>First Name: </strong><%- firstname %><br>
+        <strong>Last Name: </strong><%- lastname %><br>
+        <strong>Desired Destination: </strong><%- destination %><br>
+		
+		<hr>
+    </div>
+
+    
+    <h2>Here is some information regarding your destination!</h2>
+        
+   
+    <div>
+        <h2>Country Information:</h2>
+        <% if (countryData) { %>
+            <p><strong>Official Name:</strong> <%- countryData.officialName %></p>
+            <p><strong>Region:</strong> <%- countryData.region %></p>
+            <p><strong>Subregion:</strong> <%- countryData.subregion %></p>
+            <p><strong>Population:</strong> <%- countryData.population.toLocaleString() %></p>
+            <p><strong>Capital:</strong> <%- countryData.capital %></p>
+            <p><strong>Currency:</strong> <%- countryData.currency %></p>
+            <p><strong>Languages:</strong> <%- countryData.languages %></p>
+            <p><strong>Flag:</strong><br><img src="<%- countryData.flag %>" alt="Country Flag" style="width: 150px; height: auto;"></p>
+        <% } else { %>
+            <p>No country information available for this destination.</p>
+        <% } %>
+    </div>
+</body>
+</html>
